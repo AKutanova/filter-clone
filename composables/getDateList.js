@@ -20,6 +20,6 @@ export default function getDateList() {
 
     firstDay.setDate(firstDay.getDate() + 1)
   }
-  console.log(dateArray)
+
   return dateArray
 }
