@@ -5,11 +5,14 @@ export default function getDateList() {
 
   const now = new Date()
   
-  let firstDay = new Date()
+  // получаем предыдущий день от текущей даты
+  const firstDay = new Date()
   firstDay.setDate(now.getDate() - 1)
 
+  // получаем количество дней в месяце
   const delta = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate()
   
+  // формируем массив дат
   for (let i = 1; i <= delta; i++) {
     dateArray.push({
       day: firstDay.getDate(),
